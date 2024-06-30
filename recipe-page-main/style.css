@@ -1,0 +1,187 @@
+/* Set fonts */
+@font-face {
+    font-family: 'Outfit';
+    src: url('./assets/fonts/outfit/Outfit-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'YoungSerif';
+    src: url('./assets/fonts/young-serif/YoungSerif-Regular.ttf');
+}
+
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Outfit', sans-serif;
+}
+
+/*Colors*/
+:root {
+    --Nutmeg: hsl(14, 45%, 36%);
+    --DarkRaspberry: hsl(332, 51%, 32%);
+    --White: hsl(0, 0%, 100%);
+    --RoseWhite: hsl(330, 100%, 98%);
+    --Eggshell: hsl(30, 54%, 90%);
+    --LightGrey: hsl(30, 18%, 87%);
+    --WengeBrown: hsl(30, 10%, 34%);
+    --DarkCharcoal: hsl(24, 5%, 18%);
+}
+
+/*Generic styles*/
+.description_title, .section_title {
+    font-family: 'YoungSerif', serif;
+}
+
+span {
+    font-weight: bold;
+}
+
+p, li, span {
+    font-size: 16px;
+    color: var(--WengeBrown);
+    letter-spacing: 0;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+li {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+h2 {
+    color: var(--Nutmeg);
+}
+
+.ingredients, .instructions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 2rem;
+}
+
+.infos_list, .ingredients_list, .instructions_list {
+    margin-left: 0.5rem;
+}
+
+.ingredients_list > li > .marker, 
+.instructions_list > li > .marker {
+    color: var(--Nutmeg);
+}
+
+.limiter {
+    border-bottom: 1px solid var(--LightGrey);
+}
+
+/*Styles*/
+body {
+    background-color: var(--Eggshell);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.content {
+    background-color: var(--White);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.banner {
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.description_title {
+    color: var(--DarkCharcoal);
+}
+
+.infos {
+    background-color: var(--RoseWhite);
+    border-radius: 1rem;
+    padding: 1.5rem;
+}
+
+.infos_title {
+    color: var(--DarkRaspberry);
+    margin-bottom: 1rem;
+}
+
+.infos_list > li > .marker {
+    color: var(--DarkRaspberry);
+}
+
+.nutrition {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.nutrition_list > li {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.nutrition_list > li:not(:last-child) {
+    padding-bottom: 1rem;
+}
+
+.nutrition_metrics {
+    color: var(--Nutmeg);
+}
+
+.attribution {
+    padding: 1rem;
+    text-align: center;
+    color: var(--DarkCharcoal);
+}
+
+.attribution > a {
+    text-decoration: none;
+    color: var(--Nutmeg);
+    transition: .2s;
+}
+
+.attribution > a:hover {
+    color: var(--DarkRaspberry);
+}
+
+@media screen and (min-width: 768px) {
+    .content {
+        max-width: 50%;
+        margin: 5rem;
+        border-radius: 1rem;
+    }
+
+    .banner {
+        border-radius: 1rem;
+        margin: 0 2rem;
+        margin-top: 2rem;
+        width: 90%;
+    }
+}
